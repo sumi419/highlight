@@ -19,7 +19,7 @@ class App extends Component {
          return res.json();
        })
        .then(data => {
-        this.setState({ products: data.results })
+        this.setState({ products: data })
         // this.setState({ products: [...this.state.products, ...data.results] });
       })
        .catch((err) => console.error(err));
