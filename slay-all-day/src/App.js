@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import ProductsList from './components/ProductsList';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +19,8 @@ class App extends Component {
          return res.json();
        })
        .then(data => {
-        this.setState({ products: [...this.state.products, ...data.results] });
+        this.setState({ products: data.results })
+        // this.setState({ products: [...this.state.products, ...data.results] });
       })
        .catch((err) => console.error(err));
    }
@@ -27,6 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <div> Hello World </div>
+        <ProductsList products={this.state.products}/>
       </div>
     );
   }
