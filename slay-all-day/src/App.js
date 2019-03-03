@@ -14,12 +14,9 @@ class App extends Component {
      const api = 'http://makeup-api.herokuapp.com/api/v1/';
      axios
        .get(`${api}products.json`)
-       .then((res) => {
-         console.log(res);
-         return res.json();
-       })
-       .then(data => {
-        this.setState({ products: data })
+       .then(res => {
+        console.log(res.data)
+        this.setState({ products: res.data })
         // this.setState({ products: [...this.state.products, ...data.results] });
       })
        .catch((err) => console.error(err));
