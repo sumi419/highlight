@@ -19,6 +19,7 @@ class App extends Component {
 			.get(`${api}products.json`)
 			.then((res) => {
 				console.log(res.data);
+				// console.log(res.status);
 				this.setState({ products: res.data });
 				// this.setState({ products: [...this.state.products, ...data.results] });
 			})
