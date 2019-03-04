@@ -3,8 +3,8 @@ import './App.css';
 import axios from 'axios';
 import ProductsList from './components/ProductsList';
 import NavBar from './components/NavBar';
-// import Foundation from './components/Foundation';
-// import { Route, NavLink, withRouter } from 'react-router-dom';
+import Foundation from './components/Foundation';
+import { Route, NavLink, withRouter } from 'react-router-dom';
 
 class App extends Component {
 	constructor(props) {
