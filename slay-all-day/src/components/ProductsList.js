@@ -16,7 +16,7 @@ function ProductsList(props) {
 	// });
 	return (
 		<div className='products-list'>
-			{props.products.map((product) => (
+			{props.products.slice(0, 10).map((product) => (
 				// <div key={product.id} className='products-card'>
 				// <h1>{product.name}</h1>
 				//     <div>
