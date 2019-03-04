@@ -3,13 +3,16 @@ import './App.css';
 import axios from 'axios';
 import ProductsList from './components/ProductsList';
 import NavBar from './components/NavBar';
-import Foundation from './components/Foundation';
+// import Foundation from './components/Foundation';
+// import { Route, NavLink, withRouter } from 'react-router-dom';
 
 class App extends Component {
-	state = {
-		products: []
-	};
-
+	constructor(props) {
+		super(props);
+		this.state = {
+			products: []
+		};
+	}
 	componentDidMount() {
 		const api = 'http://makeup-api.herokuapp.com/api/v1/';
 		axios
@@ -28,10 +31,11 @@ class App extends Component {
 				<NavBar />
 				<div> Hello World </div>
 				<ProductsList products={this.state.products} />
-				<Foundation products={this.state.products} />
 			</div>
 		);
 	}
 }
 
 export default App;
+
+// <Route exact path='/foundation' render={() => <Foundation />} />
