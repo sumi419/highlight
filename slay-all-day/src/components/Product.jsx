@@ -7,7 +7,9 @@ const Product = (props) => {
 			<div>
 				<p>{props.product.brand}</p>
 				<p>{props.product.product_link}</p>
-				<img src={props.product.image_link} alt='product-img' />
+				<a href={props.product.product_link}>
+					<img src={props.product.image_link} alt='product-img' />
+				</a>
 			</div>
 		</div>
 	);
