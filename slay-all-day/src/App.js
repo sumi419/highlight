@@ -27,6 +27,7 @@ class App extends Component {
 				<NavBar />
 				<div> Hello World </div>
 				<ProductsList products={this.state.products} />
+				<Foundation products={this.state.products} />
 			</div>
 		);
 	}
