@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-class Foundation extends React {
+class Foundation extends React.Component {
 	state = {
 		products: []
 	};

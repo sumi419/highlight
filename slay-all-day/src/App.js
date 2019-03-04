@@ -36,6 +36,6 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default withRouter(App);
 
 // <Route exact path='/foundation' render={() => <Foundation />} />
