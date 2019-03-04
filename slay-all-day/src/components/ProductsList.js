@@ -2,6 +2,18 @@ import React from 'react';
 import Product from './Product';
 
 function ProductsList(props) {
+	// let item;
+	// //	let product = props.products.map((product) => {
+	// for (let i = 0; i < props.products.length; i++) {
+	// 	if (i < 10) {
+	// 		item.push(
+	// 			<div key={props.products.id[i]} className='products-card'>
+	// 				<Product product={props.products[i]} />
+	// 			</div>
+	// 		);
+	// 	}
+	// }
+	// });
 	return (
 		<div className='products-list'>
 			{props.products.map((product) => (
@@ -19,6 +31,7 @@ function ProductsList(props) {
 			))}
 		</div>
 	);
+	// return <div className='products-list'>{item}</div>;
 }
 
 export default ProductsList;
