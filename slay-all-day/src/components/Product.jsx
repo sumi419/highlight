@@ -1,14 +1,14 @@
 import React from 'react';
 
 const Product = (props) => {
+	const { name, brand, product_link, image_link } = props.product;
 	return (
 		<div>
-			<h1>{props.product.name}</h1>
+			<h1>{name}</h1>
 			<div>
-				<p>{props.product.brand}</p>
-				<p>{props.product.product_link}</p>
-				<a href={props.product.product_link}>
-					<img src={props.product.image_link} alt='product-img' />
+				<p>{brand}</p>
+				<a href={product_link}>
+					<img src={image_link} alt='product-img' />
 				</a>
 			</div>
 		</div>
