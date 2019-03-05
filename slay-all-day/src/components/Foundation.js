@@ -64,9 +64,11 @@ class Foundation extends React.Component {
 							</CardContent>
 						</CardActionArea>
 						<CardActions>
-							<Button size='small' color='primary'>
-								{product.brand}
-							</Button>
+							<a href={product.product_link}>
+								<Button size='small' color='primary'>
+									{product.brand}
+								</Button>
+							</a>
 							<Button size='small' color='primary'>
 								${product.price}0
 							</Button>
