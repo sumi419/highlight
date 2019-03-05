@@ -32,6 +32,7 @@ class App extends Component {
 				<NavBar />
 				<div> Hello World </div>
 				<ProductsList products={this.state.products} />
+				<Route exact path='/foundation' component={Foundation} />
 			</div>
 		);
 	}
