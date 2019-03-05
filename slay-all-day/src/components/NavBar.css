@@ -2,12 +2,12 @@
 	box-sizing: border-box;
 }
 
-div {
+.nav-container div {
 	line-height: 1.6;
 	margin: 0;
 }
 
-h1 {
+.nav-container h1 {
 	margin: 0;
 	font-size: 1.45em;
 }
@@ -19,6 +19,7 @@ h1 {
 .nav-container {
 	padding: 10px 15px;
 	height: 300px;
+	margin-bottom: 40px;
 	text-align: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -34,7 +35,7 @@ h1 {
 }
 
 @media (max-width: 500px) {
-	h1 {
+	.nav-container h1 {
 		margin-top: 0px;
 	}
 	.product-type {
@@ -44,13 +45,13 @@ h1 {
 }
 
 @media (min-width: 501px) {
-	h1 {
+	.nav-container h1 {
 		margin-top: 100px;
 	}
 }
 
 @media (min-width: 769px) {
-	h1 {
+	.nav-container h1 {
 		margin-top: 100px;
 	}
 	.nav-container,
