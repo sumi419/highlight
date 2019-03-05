@@ -16,12 +16,24 @@ const NavBar = () => {
 					<Link to='/blush'>
 						<div>Blush</div>
 					</Link>
-					<div>Bronzer</div>
-					<div>Eyebrow</div>
-					<div>Eyeshadow</div>
-					<div>Eyeliner</div>
-					<div>Mascara</div>
-					<div>Lipstick</div>
+					<Link to='/bronzer'>
+						<div>Bronzer</div>
+					</Link>
+					<Link to='/eyebrows'>
+						<div>Eyebrows</div>
+					</Link>
+					<Link to='/eyeshadow'>
+						<div>Eyeshadow</div>
+					</Link>
+					<Link to='/eyeliner'>
+						<div>Eyeliner</div>
+					</Link>
+					<Link to='/mascara'>
+						<div>Mascara</div>
+					</Link>
+					<Link to='/lipstick'>
+						<div>Lipstick</div>
+					</Link>
 				</div>
 			</div>
 		</div>
