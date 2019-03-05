@@ -1,62 +1,62 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 div {
-  line-height: 1.6;
-  margin: 0;
+	line-height: 1.6;
+	margin: 0;
 }
 
-
 h1 {
-  margin: 0;
-  font-size: 1.45em;
+	margin: 0;
+	font-size: 1.45em;
 }
 
 .main-nav {
-  margin-top: 5px;
+	margin-top: 5px;
 }
 
 .nav-container {
-  padding: 10px 15px;
-  text-align: center;
+	padding: 10px 15px;
+	text-align: center;
+	background: url('./pink.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
 }
 
 .product-type {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
-  padding: 10px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 10px;
+	padding: 10px;
 }
 
 @media (max-width: 500px) {
-  .product-type {
-    display: flex;
-    flex-direction: column
-  }
+	.product-type {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
-
 @media (min-width: 769px) {
+	.nav-container,
+	.main-nav {
+		display: flex;
+	}
 
-  .nav-container,
-  .main-nav {
-    display: flex;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    max-width: 1150px;
-
-  }
+	.nav-container {
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
 }
 
 @media (min-width: 1025px) {
-  .nav-container {
-    flex-direction: column;
-    justify-content: space-between;
-  }
+	.nav-container {
+		flex-direction: column;
+		justify-content: space-between;
+	}
 }
