@@ -13,8 +13,9 @@ const NavBar = () => {
 					<Link to='/foundation'>
 						<div>Foundation</div>
 					</Link>
-
-					<div>Blush</div>
+					<Link to='/blush'>
+						<div>Blush</div>
+					</Link>
 					<div>Bronzer</div>
 					<div>Eyebrow</div>
 					<div>Eyeshadow</div>
