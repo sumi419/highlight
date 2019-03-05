@@ -12,7 +12,8 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
 	card: {
-		maxWidth: 345
+		maxWidth: 345,
+		margin: 30
 	},
 	media: {
 		height: 140
@@ -39,7 +40,7 @@ class Foundation extends React.Component {
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{this.state.foundations.map((product) => (
+				{this.state.foundations.slice(0, 10).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
 							<a href={product.product_link}>
