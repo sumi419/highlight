@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
 	return (
 		<div className='nav-container'>
-			<h1> Slay All Day ✨</h1>
+			<Link to='/'>
+				<h1> Slay All Day ✨</h1>
+			</Link>
 			<div className='main-nav'>
 				<div className='product-type'>
 					<Link to='/foundation'>

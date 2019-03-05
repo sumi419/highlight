@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ProductsList from './ProductsList';
-import NavBar from './NavBar';
 
 class Home extends Component {
 	constructor(props) {
@@ -26,7 +25,6 @@ class Home extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<NavBar />
 				<ProductsList products={this.state.products} />
 			</div>
 		);
