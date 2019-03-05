@@ -8,7 +8,7 @@ import { Route, withRouter } from 'react-router-dom';
 import Home from './components/Home';
 import Eyebrows from './components/Eyebrows';
 import Eyeshadow from './components/Eyeshadow';
-
+import Eyeliner from './components/Eyeliner';
 class App extends Component {
 	render() {
 		return (
@@ -20,6 +20,7 @@ class App extends Component {
 				<Route exact path='/bronzer' component={Bronzer} />
 				<Route exact path='/eyebrows' component={Eyebrows} />
 				<Route exact path='/eyeshadow' component={Eyeshadow} />
+				<Route exact path='/eyeliner' component={Eyeliner} />
 			</div>
 		);
 	}
