@@ -9,6 +9,8 @@ import Home from './components/Home';
 import Eyebrows from './components/Eyebrows';
 import Eyeshadow from './components/Eyeshadow';
 import Eyeliner from './components/Eyeliner';
+import Mascara from './components/Mascara';
+
 class App extends Component {
 	render() {
 		return (
@@ -21,6 +23,7 @@ class App extends Component {
 				<Route exact path='/eyebrows' component={Eyebrows} />
 				<Route exact path='/eyeshadow' component={Eyeshadow} />
 				<Route exact path='/eyeliner' component={Eyeliner} />
+				<Route exact path='/mascara' component={Mascara} />
 			</div>
 		);
 	}
