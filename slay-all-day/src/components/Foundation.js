@@ -12,11 +12,17 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = {
 	card: {
-		maxWidth: 345,
-		margin: 30
+		width: '31%',
+		height: '350px',
+		'min-width': '300px',
+		margin: '0 0 15px 1.75%'
 	},
 	media: {
-		height: 140
+		height: 200
+	},
+	button: {
+		display: 'flex',
+		'justify-content': 'space-between'
 	}
 };
 
@@ -40,7 +46,7 @@ class Foundation extends React.Component {
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{this.state.foundations.slice(0, 10).map((product) => (
+				{this.state.foundations.slice(0, 12).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
 							<a href={product.product_link}>
@@ -52,9 +58,9 @@ class Foundation extends React.Component {
 							</a>
 							<CardContent>
 								<Typography gutterBottom variant='h5' component='h2'>
-									{product.name}
+									{product.brand}
 								</Typography>
-								<Typography component='p'>{product.brand}</Typography>
+								<Typography component='p'>{product.name}</Typography>
 							</CardContent>
 						</CardActionArea>
 						<CardActions>
