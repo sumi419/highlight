@@ -84,7 +84,7 @@ class Home extends React.Component {
 		return (
 			<div className='foundations-list'>
 				{this.state.products.slice(0, 12).map((product) => (
-					<Card className={classes.card}>
+					<Card className={classes.card} key={product.id}>
 						<CardActionArea>
 							<a href={product.product_link}>
 								<CardMedia
