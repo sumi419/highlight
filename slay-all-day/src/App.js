@@ -26,7 +26,7 @@ class App extends Component {
 			.get(api)
 			.then((res) => {
 				console.log(res.data);
-				setTimeout(this.setState({ products: res.data }), 10);
+				this.setState({ products: res.data });
 			})
 			.catch((err) => console.error(err));
 	}
@@ -35,12 +35,18 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<NavBar />
-				{this.state.products ? (
+				{/*	{this.state.products ? (
 					<Route exact path='/' component={Loading} />
 				) : (
 					<Route exact path='/' component={Home} />
 				)}
-				<Route exact path='/foundation' component={Foundation} />
+				*/}
+				<Route exact path='/' component={Home} />
+				<Route
+					exact
+					path='/foundation'
+					render={(props) => <Foundation products={this.state.products} />}
+				/>
 				<Route exact path='/blush' component={Blush} />
 				<Route exact path='/bronzer' component={Bronzer} />
 				<Route exact path='/eyebrows' component={Eyebrows} />
