@@ -18,3 +18,72 @@ a {
 CardActions {
 	justify-content: space-around;
 }
+
+.loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50%;
+}
+
+.heart {
+	/* position: relative; */
+	height: 200px;
+}
+
+.heart,
+.heart:before,
+.heart:after {
+	display: block;
+	width: 70px;
+	height: 70px;
+	background-color: #dea6af;
+	transform: rotateZ(45deg);
+}
+
+.heart:before,
+.heart:after {
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+}
+
+.heart:before {
+	transform: translateX(-50%);
+	animation: animX 1s infinite 0.25s;
+}
+
+.heart:after {
+	transform: translateY(-50%);
+	animation: animY 1s infinite;
+}
+
+@keyframes animX {
+	0% {
+		transform: translateX(-50%);
+	}
+	25% {
+		transform: translateX(-50%);
+	}
+	50% {
+		transform: translateX(50%);
+	}
+	75% {
+		transform: translateX(50%);
+	}
+}
+
+@keyframes animY {
+	0% {
+		transform: translateY(-50%);
+	}
+	25% {
+		transform: translateY(-50%);
+	}
+	50% {
+		transform: translateY(50%);
+	}
+	75% {
+		transform: translateY(50%);
+	}
+}

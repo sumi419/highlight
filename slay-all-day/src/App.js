@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 import NavBar from './components/NavBar';
 import Foundation from './components/Foundation';
 import Blush from './components/Blush';
@@ -12,13 +13,33 @@ import Eyeliner from './components/Eyeliner';
 import Mascara from './components/Mascara';
 import Lipstick from './components/Lipstick';
 import Search from './components/Search';
+import Loading from './components/Loading';
 
 class App extends Component {
+	state = {
+		products: []
+	};
+
+	componentDidMount() {
+		const api = 'https://makeup-api.herokuapp.com/api/v1/products.json';
+		axios
+			.get(api)
+			.then((res) => {
+				console.log(res.data);
+				setTimeout(this.setState({ products: res.data }), 10);
+			})
+			.catch((err) => console.error(err));
+	}
+
 	render() {
 		return (
 			<div className='App'>
 				<NavBar />
-				<Route exact path='/' component={Home} />
+				{this.state.products ? (
+					<Route exact path='/' component={Loading} />
+				) : (
+					<Route exact path='/' component={Home} />
+				)}
 				<Route exact path='/foundation' component={Foundation} />
 				<Route exact path='/blush' component={Blush} />
 				<Route exact path='/bronzer' component={Bronzer} />
