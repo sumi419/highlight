@@ -27,26 +27,29 @@ const styles = {
 };
 
 class Eyeshadow extends React.Component {
-	state = {
-		eyeshadows: []
-	};
+	// state = {
+	// 	eyeshadows: []
+	// };
 
-	componentDidMount() {
-		const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeshadow';
-		axios
-			.get(api)
-			.then((res) => {
-				console.log(res.data);
-				this.setState({ eyeshadows: res.data });
-			})
-			.catch((err) => console.error(err));
-	}
+	// componentDidMount() {
+	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeshadow';
+	// 	axios
+	// 		.get(api)
+	// 		.then((res) => {
+	// 			console.log(res.data);
+	// 			this.setState({ eyeshadows: res.data });
+	// 		})
+	// 		.catch((err) => console.error(err));
+	// }
 
 	render() {
+		let filtered = this.props.products.filter((product) =>
+			product.product_type.includes('eyeshadow')
+		);
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{this.state.eyeshadows.slice(0, 12).map((product) => (
+				{filtered.slice(0, 15).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
 							<a href={product.product_link}>
