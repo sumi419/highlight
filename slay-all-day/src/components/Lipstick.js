@@ -27,26 +27,29 @@ const styles = {
 };
 
 class Lipstick extends React.Component {
-	state = {
-		lipsticks: []
-	};
+	// state = {
+	// 	lipsticks: []
+	// };
 
-	componentDidMount() {
-		const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=lipstick';
-		axios
-			.get(api)
-			.then((res) => {
-				console.log(res.data);
-				this.setState({ lipsticks: res.data });
-			})
-			.catch((err) => console.error(err));
-	}
+	// componentDidMount() {
+	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=lipstick';
+	// 	axios
+	// 		.get(api)
+	// 		.then((res) => {
+	// 			console.log(res.data);
+	// 			this.setState({ lipsticks: res.data });
+	// 		})
+	// 		.catch((err) => console.error(err));
+	// }
 
 	render() {
+		let filtered = this.props.products.filter((product) =>
+			product.product_type.includes('lipstick')
+		);
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{this.state.lipsticks.slice(0, 12).map((product) => (
+				{filtered.slice(0, 15).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
 							<a href={product.product_link}>
