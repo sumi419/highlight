@@ -5,11 +5,13 @@
 .nav-container div {
 	line-height: 1.6;
 	color: whitesmoke;
+	font-weight: 900;
 }
 
 .nav-container h1 {
 	margin: 0;
 	font-size: 1.45em;
+	color: whitesmoke;
 }
 
 .main-nav {
@@ -53,6 +55,7 @@
 @media (min-width: 769px) {
 	.nav-container h1 {
 		margin-top: 100px;
+		font-size: 70px;
 	}
 	.nav-container,
 	.main-nav {
