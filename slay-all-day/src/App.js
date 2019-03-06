@@ -47,13 +47,37 @@ class App extends Component {
 					path='/foundation'
 					render={(props) => <Foundation products={this.state.products} />}
 				/>
-				<Route exact path='/blush' component={Blush} />
-				<Route exact path='/bronzer' component={Bronzer} />
-				<Route exact path='/eyebrows' component={Eyebrows} />
-				<Route exact path='/eyeshadow' component={Eyeshadow} />
-				<Route exact path='/eyeliner' component={Eyeliner} />
-				<Route exact path='/mascara' component={Mascara} />
-				<Route exact path='/lipstick' component={Lipstick} />
+				<Route exact path='/blush' render={(props) => <Blush products={this.state.products} />} />
+				<Route
+					exact
+					path='/bronzer'
+					render={(props) => <Bronzer products={this.state.products} />}
+				/>{' '}
+				<Route
+					exact
+					path='/eyebrows'
+					render={(props) => <Eyebrows products={this.state.products} />}
+				/>
+				<Route
+					exact
+					path='/eyeshadow'
+					render={(props) => <Eyeshadow products={this.state.products} />}
+				/>
+				<Route
+					exact
+					path='/eyeliner'
+					render={(props) => <Eyeliner products={this.state.products} />}
+				/>
+				<Route
+					exact
+					path='/mascara'
+					render={(props) => <Mascara products={this.state.products} />}
+				/>
+				<Route
+					exact
+					path='/lipstick'
+					render={(props) => <Lipstick products={this.state.products} />}
+				/>
 			</div>
 		);
 	}
