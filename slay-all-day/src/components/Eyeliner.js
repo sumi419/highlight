@@ -27,26 +27,29 @@ const styles = {
 };
 
 class Eyeliner extends React.Component {
-	state = {
-		eyeliner: []
-	};
+	// state = {
+	// 	eyeliner: []
+	// };
 
-	componentDidMount() {
-		const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner';
-		axios
-			.get(api)
-			.then((res) => {
-				console.log(res.data);
-				this.setState({ eyeliner: res.data });
-			})
-			.catch((err) => console.error(err));
-	}
+	// componentDidMount() {
+	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner';
+	// 	axios
+	// 		.get(api)
+	// 		.then((res) => {
+	// 			console.log(res.data);
+	// 			this.setState({ eyeliner: res.data });
+	// 		})
+	// 		.catch((err) => console.error(err));
+	// }
 
 	render() {
+		let filtered = this.props.products.filter((product) =>
+			product.product_type.includes('eyeliner')
+		);
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{this.state.eyeliner.slice(0, 12).map((product) => (
+				{filtered.slice(0, 15).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
 							<a href={product.product_link}>
