@@ -11,6 +11,7 @@ import Eyeshadow from './components/Eyeshadow';
 import Eyeliner from './components/Eyeliner';
 import Mascara from './components/Mascara';
 import Lipstick from './components/Lipstick';
+import Search from './components/Search';
 
 class App extends Component {
 	render() {

@@ -2,12 +2,25 @@ import React from 'react';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = (props) => {
 	return (
 		<div className='nav-container'>
-			<Link to='/'>
-				<h1> Slay All Day ✨</h1>
-			</Link>
+			<div className='head-search'>
+				<Link to='/'>
+					<h1> Slay All Day ✨</h1>
+				</Link>
+				{/*
+					<form action=''>
+						<input
+							type='text'
+							placeholder='Search'
+							onChange={props.handleSearchInput}
+							value={props.filterTarget}
+							name='filterTarget'
+						/>
+					</form>
+					*/}
+			</div>
 			<div className='main-nav'>
 				<div className='product-type'>
 					<Link to='/foundation'>
