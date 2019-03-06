@@ -27,26 +27,29 @@ const styles = {
 };
 
 class Foundation extends React.Component {
-	state = {
-		foundations: []
-	};
+	// state = {
+	// 	foundations: []
+	// };
 
-	componentDidMount() {
-		const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation';
-		axios
-			.get(api)
-			.then((res) => {
-				console.log(res.data);
-				this.setState({ foundations: res.data });
-			})
-			.catch((err) => console.error(err));
-	}
+	// componentDidMount() {
+	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation';
+	// 	axios
+	// 		.get(api)
+	// 		.then((res) => {
+	// 			console.log(res.data);
+	// 			this.setState({ foundations: res.data });
+	// 		})
+	// 		.catch((err) => console.error(err));
+	// }
 
 	render() {
+		let filtered = this.props.products.filter((product) =>
+			product.product_type.includes('foundation')
+		);
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{this.state.foundations.slice(0, 12).map((product) => (
+				{filtered.slice(0, 15).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
 							<a href={product.product_link}>

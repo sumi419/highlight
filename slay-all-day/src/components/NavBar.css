@@ -37,7 +37,7 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-image: linear-gradient(rgba(249, 119, 76, 0.15), rgba(128, 42, 12, 0.15)),
-		url('./makeup.jpg');
+		url('./images/makeup.jpg');
 }
 .product-type {
 	display: grid;
