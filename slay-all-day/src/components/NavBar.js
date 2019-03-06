@@ -33,7 +33,7 @@ const NavBar = () => {
 					</Link>
 					<Link to='/eyebrows'>
 						<img
-							src='https://cdn1.iconfinder.com/data/icons/eyebrow-tattoo-glyph-silhouettes/300/233017476Untitled-3-512.png'
+							src='https://cdn1.iconfinder.com/data/icons/eyebrow-tattoo-filled-color/300/23363544Untitled-3-512.png'
 							alt='icon'
 						/>
 						<div>Eyebrows</div>
