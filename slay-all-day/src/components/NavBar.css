@@ -13,6 +13,11 @@
 	font-size: 1.45em;
 	color: whitesmoke;
 }
+.nav-container img {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
 
 .main-nav {
 	margin-top: 5px;
