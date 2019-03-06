@@ -17,9 +17,13 @@
 	border-radius: 50%;
 	height: 50px;
 	width: 50px;
+	transition: transform 0.2s;
 	background-image: linear-gradient(rgba(222, 166, 175, 0.85), rgba(128, 42, 12, 0.55));
 }
 
+.nav-container img:hover {
+	transform: scale(1.5);
+}
 .main-nav {
 	margin-top: 5px;
 }
