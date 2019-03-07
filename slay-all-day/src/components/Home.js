@@ -56,6 +56,9 @@ const styles = {
 	},
 	media: {
 		height: 200
+		// 'background-size': 'cover',
+		// 'background-repeat': 'no-repeat',
+		// 'background-position': '50% 50%'
 	},
 	button: {
 		display: 'flex',
