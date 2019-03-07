@@ -56,7 +56,8 @@ class Mascara extends React.Component {
 							<a href={product.product_link}>
 								<CardMedia
 									className={classes.media}
-									image={product.image_link}
+									// image={product.image_link}
+									image={product.api_featured_image}
 									title={product.name}
 								/>
 							</a>
