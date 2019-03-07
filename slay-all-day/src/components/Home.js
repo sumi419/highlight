@@ -64,26 +64,26 @@ const styles = {
 };
 
 class Home extends React.Component {
-	state = {
-		products: []
-	};
+	// state = {
+	// 	products: []
+	// };
 
-	componentDidMount() {
-		const api = 'https://makeup-api.herokuapp.com/api/v1/products.json';
-		axios
-			.get(api)
-			.then((res) => {
-				console.log(res.data);
-				this.setState({ products: res.data });
-			})
-			.catch((err) => console.error(err));
-	}
+	// componentDidMount() {
+	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json';
+	// 	axios
+	// 		.get(api)
+	// 		.then((res) => {
+	// 			console.log(res.data);
+	// 			this.setState({ products: res.data });
+	// 		})
+	// 		.catch((err) => console.error(err));
+	// }
 
 	render() {
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{this.state.products.slice(0, 12).map((product) => (
+				{this.props.products.slice(0, 12).map((product) => (
 					<Card className={classes.card} key={product.id}>
 						<CardActionArea>
 							<a href={product.product_link}>

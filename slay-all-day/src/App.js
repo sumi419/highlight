@@ -41,7 +41,7 @@ class App extends Component {
 					<Route exact path='/' component={Home} />
 				)}
 				*/}
-				<Route exact path='/' component={Home} />
+				<Route exact path='/' render={(props) => <Home products={this.state.products} />} />
 				<Route
 					exact
 					path='/foundation'
@@ -52,7 +52,7 @@ class App extends Component {
 					exact
 					path='/bronzer'
 					render={(props) => <Bronzer products={this.state.products} />}
-				/>{' '}
+				/>
 				<Route
 					exact
 					path='/eyebrows'

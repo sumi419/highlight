@@ -36,7 +36,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	background-image: linear-gradient(rgba(249, 119, 76, 0.15), rgba(128, 42, 12, 0.15)),
+	background-image: linear-gradient(rgba(249, 119, 76, 0.55), rgba(128, 42, 12, 0.75)),
 		url('./images/makeup.jpg');
 }
 .product-type {
