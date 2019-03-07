@@ -24,20 +24,29 @@ class Search extends Component {
 			.catch((err) => console.error(err));
 	}
 
+	// itemFilter = (e) => {
+	// 	// build out
+	// 	this.state.products.
+	// };
+
 	handleSearchInput = (e) => {
-		this.setState({
-			searchInput: e.target.value
-		});
+		e.preventDefault();
+		this.setState(
+			{
+				searchInput: e.target.value
+			},
+			() => this.itemFilter()
+		);
 	};
 
 	render() {
-		let filtered = this.state.posts.filter((product) =>
+		console.log(this.state.products);
+		let filtered = this.state.products.filter((product) =>
 			product.name.includes(this.state.searchInput)
 		);
 		return (
 			<div>
 				<NavBar searchInput={this.state.searchInput} handleSearchInput={this.handleSearchInput} />
-				return (
 				<div className='products-list'>
 					{filtered.map((product) => (
 						<div key={product.id} className='products-card'>

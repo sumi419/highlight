@@ -9,17 +9,17 @@ const NavBar = (props) => {
 				<Link to='/'>
 					<h1> Slay All Day ✨</h1>
 				</Link>
-				{/*
-					 <form action=''>
+
+				{/*}	<form action=''>
 					<input
 						type='text'
 						placeholder='Search'
 						onChange={props.handleSearchInput}
 						value={props.filterTarget}
 						name='filterTarget'
-					/> 
+					/>
 				</form>
-			*/}
+	*/}
 			</div>
 			<div className='main-nav'>
 				<div className='product-type'>

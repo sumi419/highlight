@@ -55,7 +55,8 @@ const styles = {
 		margin: '0 0 15px 1.75%'
 	},
 	media: {
-		height: 200
+		height: 200,
+		'background-size': 'contain'
 		// 'background-size': 'cover',
 		// 'background-repeat': 'no-repeat',
 		// 'background-position': '50% 50%'
