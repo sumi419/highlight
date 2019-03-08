@@ -40,7 +40,22 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<NavBar />
-				{/*	{this.state.products ? (
+				{/*	
+					Ternary Operator:
+						a = 3
+						b = 2
+						if ( (a + b)  == 5 
+							do something 
+						else 
+							do something else
+
+					If logic has something to do, or do something else,
+					ternary shorthand can be rewritten as evaluate expression,
+					do something, and if not true, do something else
+					(a+b == 5) ? do something : do something else
+					
+					
+					{this.state.products ? (
 					<Route exact path='/' component={Loading} />
 				) : (
 					<Route exact path='/' component={Home} />
