@@ -14,6 +14,7 @@ import Mascara from './components/Mascara';
 import Lipstick from './components/Lipstick';
 import Search from './components/Search';
 import Loading from './components/Loading';
+import data from './data';
 
 class App extends Component {
 	state = {
@@ -21,14 +22,18 @@ class App extends Component {
 	};
 
 	componentDidMount() {
-		const api = 'https://makeup-api.herokuapp.com/api/v1/products.json';
-		axios
-			.get(api)
-			.then((res) => {
-				console.log(res.data);
-				this.setState({ products: res.data });
-			})
-			.catch((err) => console.error(err));
+		// const api = 'https://makeup-api.herokuapp.com/api/v1/products.json';
+		// axios
+		// 	.get(api)
+		// 	.then((res) => {
+		// 		console.log(res.data);
+		// 		this.setState({ products: res.data });
+		// 	})
+		// 	.catch((err) => console.error(err));
+		// console.log(data.map((item) => this.setState({ products: item })));
+		this.setState({
+			products: data
+		});
 	}
 
 	render() {
