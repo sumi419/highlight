@@ -14,6 +14,7 @@ import Mascara from './components/ProductType/Mascara';
 import Lipstick from './components/ProductType/Lipstick';
 import Search from './components/Search';
 import Loading from './components/Loading';
+import Carousel from './Carousel';
 import data from './data';
 
 class App extends Component {
@@ -35,7 +36,6 @@ class App extends Component {
 			products: data
 		});
 	}
-
 	render() {
 		return (
 			<div className='App'>
@@ -53,7 +53,7 @@ class App extends Component {
 					ternary shorthand can be rewritten as evaluate expression,
 					do something, and if not true, do something else
 					(a+b == 5) ? do something : do something else
-					
+
 					
 					{this.state.products ? (
 					<Route exact path='/' component={Loading} />
