@@ -71,6 +71,9 @@ class Home extends React.Component {
 	// state = {
 	// 	products: []
 	// };
+	state = {
+		filteredSearch: []
+	};
 
 	// componentDidMount() {
 	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json';
@@ -84,10 +87,14 @@ class Home extends React.Component {
 	// }
 
 	render() {
+		let filteredSearch = this.props.products.filter((product) =>
+			product.name.toLowerCase().includes(this.props.searchInput)
+		);
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{this.props.products.slice(0, 12).map((product) => (
+				{/*{this.props.products.slice(0, 12).map((product) => ( */}
+				{filteredSearch.slice(0, 12).map((product) => (
 					<Card className={classes.card} key={product.id}>
 						<CardActionArea>
 							<a href={product.product_link}>

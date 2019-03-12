@@ -21,6 +21,15 @@ const NavBar = (props) => {
 					/>
 				</form>
 	*/}
+				<form action=''>
+					<input
+						type='text'
+						placeholder='Search'
+						onChange={props.handleSearchInput}
+						value={props.filterTarget}
+						name='filterTarget'
+					/>
+				</form>
 
 				<div className='main-nav'>
 					<div className='product-type'>
