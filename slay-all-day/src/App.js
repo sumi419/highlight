@@ -19,7 +19,9 @@ import data from './data';
 
 class App extends Component {
 	state = {
-		products: []
+		products: [],
+		searchInput: '',
+		filteredSearch: []
 	};
 
 	componentDidMount() {
@@ -36,10 +38,35 @@ class App extends Component {
 			products: data
 		});
 	}
+
+	// 	itemFilter = (e) => {
+	// 	this.state.products
+	// };
+
+	handleSearchInput = (e) => {
+		this.setState({
+			searchInput: e.target.value
+		});
+	};
+
+	// handleSearchInput = (e) => {
+	// 	e.preventDefault();
+	// 	this.setState(
+	// 		{
+	// 			searchInput: e.target.value
+	// 		},
+	// 		() => this.itemFilter()
+	// 	);
+	// };
+
 	render() {
 		return (
 			<div className='App'>
-				<NavBar />
+				<NavBar
+					searchInput={this.state.searchInput}
+					filteredSearch={this.state.filteredSearch}
+					handleSearchInput={this.handleSearchInput}
+				/>
 				{/*	
 					Ternary Operator:
 						a = 3
@@ -61,42 +88,104 @@ class App extends Component {
 					<Route exact path='/' component={Home} />
 				)}
 				*/}
-				<Route exact path='/' render={(props) => <Home products={this.state.products} />} />
+				<Route
+					exact
+					path='/'
+					render={(props) => (
+						<Home
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
+				/>
 				<Route
 					exact
 					path='/foundation'
-					render={(props) => <Foundation products={this.state.products} />}
+					render={(props) => (
+						<Foundation
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
 				/>
-				<Route exact path='/blush' render={(props) => <Blush products={this.state.products} />} />
+				<Route
+					exact
+					path='/blush'
+					render={(props) => (
+						<Blush
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
+				/>
 				<Route
 					exact
 					path='/bronzer'
-					render={(props) => <Bronzer products={this.state.products} />}
+					render={(props) => (
+						<Bronzer
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
 				/>
 				<Route
 					exact
 					path='/eyebrows'
-					render={(props) => <Eyebrows products={this.state.products} />}
+					render={(props) => (
+						<Eyebrows
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
 				/>
 				<Route
 					exact
 					path='/eyeshadow'
-					render={(props) => <Eyeshadow products={this.state.products} />}
+					render={(props) => (
+						<Eyeshadow
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
 				/>
 				<Route
 					exact
 					path='/eyeliner'
-					render={(props) => <Eyeliner products={this.state.products} />}
+					render={(props) => (
+						<Eyeliner
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
 				/>
 				<Route
 					exact
 					path='/mascara'
-					render={(props) => <Mascara products={this.state.products} />}
+					render={(props) => (
+						<Mascara
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
 				/>
 				<Route
 					exact
 					path='/lipstick'
-					render={(props) => <Lipstick products={this.state.products} />}
+					render={(props) => (
+						<Lipstick
+							products={this.state.products}
+							filteredSearch={this.state.filteredSearch}
+							searchInput={this.state.searchInput}
+						/>
+					)}
 				/>
 			</div>
 		);

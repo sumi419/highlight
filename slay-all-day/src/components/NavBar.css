@@ -24,11 +24,11 @@
 .nav-container img:hover {
 	transform: scale(1.5);
 }
-.main-nav {
+/* .main-nav {
 	margin-top: 5px;
 	top: 10px;
 	position: relative;
-}
+} */
 
 .nav-container {
 	padding: 10px 15px;
