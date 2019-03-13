@@ -31,7 +31,9 @@ class Blush extends React.Component {
 	// state = {
 	// 	blushs: []
 	// };
-
+	state = {
+		filteredSearch: []
+	};
 	// componentDidMount() {
 	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush';
 	// 	axios
@@ -45,11 +47,15 @@ class Blush extends React.Component {
 
 	render() {
 		let filtered = this.props.products.filter((product) => product.product_type.includes('blush'));
+		let filteredSearch = filtered.filter((product) =>
+			product.name.toLowerCase().includes(this.props.searchInput)
+		);
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
 				{/*} {this.state.blushs.slice(0, 12).map((product) => (*/}
-				{filtered.slice(0, 15).map((product) => (
+				{/*{filtered.slice(0, 15).map((product) => (*/}
+				{filteredSearch.slice(0, 12).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
 							<a href={product.product_link}>
