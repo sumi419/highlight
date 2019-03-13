@@ -45,10 +45,29 @@ class Blush extends React.Component {
 	// 		.catch((err) => console.error(err));
 	// }
 
+	// componentDidMount() {
+	// 	console.log(
+	// 		this.props.products.filter(
+	// 			(product) => !product.brand.toLowerCase().includes(this.props.searchInput)
+	// 		)
+	// 	);
+	// 	console.log(this.props.products.map((product) => product.name));
+	// }
+
 	render() {
-		let filtered = this.props.products.filter((product) => product.product_type.includes('blush'));
-		let filteredSearch = filtered.filter((product) =>
-			product.name.toLowerCase().includes(this.props.searchInput)
+		// filter first
+		let newArray = this.props.products.filter(function(e) {
+			return e.brand === 0 || e.brand;
+		});
+		console.log(newArray);
+		// this filter is by product type
+		let filtered = newArray.filter((product) => product.product_type.includes('blush'));
+
+		// this filter is for Search
+		let filteredSearch = filtered.filter(
+			(product) =>
+				product.name.toLowerCase().includes(this.props.searchInput) ||
+				product.brand.includes(this.props.searchInput)
 		);
 		const { classes } = this.props;
 		return (
