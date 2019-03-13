@@ -31,6 +31,9 @@ class Eyeliner extends React.Component {
 	// state = {
 	// 	eyeliner: []
 	// };
+	state = {
+		filteredSearch: []
+	};
 
 	// componentDidMount() {
 	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner';
@@ -47,10 +50,15 @@ class Eyeliner extends React.Component {
 		let filtered = this.props.products.filter((product) =>
 			product.product_type.includes('eyeliner')
 		);
+		let filteredSearch = filtered.filter(
+			(product) =>
+				product.name.toLowerCase().includes(this.props.searchInput) ||
+				product.brand.includes(this.props.searchInput)
+		);
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{filtered.slice(0, 15).map((product) => (
+				{filteredSearch.slice(0, 15).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
 							<a href={product.product_link}>
