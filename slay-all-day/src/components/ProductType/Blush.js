@@ -55,7 +55,8 @@ class Blush extends React.Component {
 	// }
 
 	render() {
-		// filter first
+		// filter out for null values first
+		console.log(this.props.products.map((product) => product.brand));
 		let newArray = this.props.products.filter(function(e) {
 			return e.brand === 0 || e.brand;
 		});
