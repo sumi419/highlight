@@ -34,8 +34,13 @@ class App extends Component {
 		// 	})
 		// 	.catch((err) => console.error(err));
 		// console.log(data.map((item) => this.setState({ products: item })));
+
+		// filter out null values before I set them to state
+		let products = data.filter(function(e) {
+			return e.brand === 0 || e.brand;
+		});
 		this.setState({
-			products: data
+			products: products
 		});
 	}
 
