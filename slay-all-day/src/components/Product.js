@@ -5,11 +5,35 @@ const Product = (props) => {
 	console.log(props.match.params.id);
 	const product = props.products.find((product) => `${product.id}` === props.match.params.id);
 	console.log(product);
-	const singleProduct = product;
+	// const singleProduct = product;
 	// console.log(singleProduct[0].id);
 	// const { name, brand, product_link, image_link, price } = product;
-
-	return <div>{product.brand}</div>;
+	// const newProduct = (product ?
+	// <div>
+	// <h1>{product.name}</h1>
+	// <div>
+	// 	<p>{product.brand}</p>
+	// 	<p>{product.product_link}</p>
+	// 	<img src={product.image_link} alt='product-img' />
+	// </div>
+	// </div> ) :('123')
+	let newProduct;
+	if (product) {
+		newProduct = (
+			<div>
+				<h1>{product.name}</h1>
+				<div>
+					<p>{product.brand}</p>
+					<p>{product.product_link}</p>
+					<img src={product.image_link} alt='product-img' />
+				</div>
+			</div>
+		);
+	} else {
+		newProduct = <h1>Loading...</h1>;
+	}
+	console.log(newProduct);
+	return <div>{newProduct}</div>;
 };
 
 export default Product;
