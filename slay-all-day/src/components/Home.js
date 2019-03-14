@@ -96,36 +96,43 @@ class Home extends React.Component {
 		return (
 			<div className='foundations-list'>
 				{/*{this.props.products.slice(0, 12).map((product) => ( */}
-				{filteredSearch.slice(0, 12).map((product) => (
-					<Card className={classes.card} key={product.id}>
-						<CardActionArea>
-							<a href={product.product_link}>
-								<CardMedia
-									className={classes.media}
-									// image={product.image_link}
-									image={product.api_featured_image}
-									title={product.name}
-								/>
-							</a>
-							<CardContent>
-								<Typography gutterBottom variant='h5' component='h2'>
-									{product.brand}
-								</Typography>
-								<Typography component='p'>{product.name}</Typography>
-							</CardContent>
-						</CardActionArea>
-						<CardActions>
-							<a href={product.product_link}>
-								<Button size='small' color='primary'>
-									{product.brand}
-								</Button>
-							</a>
-							<Button size='small' color='primary'>
-								${product.price}0
-							</Button>
-						</CardActions>
-					</Card>
-				))}
+				{filteredSearch.slice(0, 12).map((product) => {
+					{
+						console.log(product);
+					}
+					return (
+						<Link key={product.id} to={`/products/${product.id}`}>
+							<Card className={classes.card}>
+								<CardActionArea>
+									<a>
+										<CardMedia
+											className={classes.media}
+											// image={product.image_link}
+											image={product.api_featured_image}
+											title={product.name}
+										/>
+									</a>
+									<CardContent>
+										<Typography gutterBottom variant='h5' component='h2'>
+											{product.brand}
+										</Typography>
+										<Typography component='p'>{product.name}</Typography>
+									</CardContent>
+								</CardActionArea>
+								<CardActions>
+									<a href={product.product_link}>
+										<Button size='small' color='primary'>
+											{product.brand}
+										</Button>
+									</a>
+									<Button size='small' color='primary'>
+										${product.price}0
+									</Button>
+								</CardActions>
+							</Card>
+						</Link>
+					);
+				})}
 			</div>
 		);
 	}

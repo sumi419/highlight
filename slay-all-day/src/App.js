@@ -12,6 +12,8 @@ import Eyeshadow from './components/ProductType/Eyeshadow';
 import Eyeliner from './components/ProductType/Eyeliner';
 import Mascara from './components/ProductType/Mascara';
 import Lipstick from './components/ProductType/Lipstick';
+import ProductsList from './components/ProductsList';
+import Product from './components/Product';
 import Search from './components/Search';
 import Loading from './components/Loading';
 import Carousel from './Carousel';
@@ -63,6 +65,12 @@ class App extends Component {
 	// 		() => this.itemFilter()
 	// 	);
 	// };
+	handleClick = (e, product) => {
+		e.preventDefault();
+		console.log(product);
+		console.log(e.target);
+		// localStorage.setItem('product_id', product.id);
+	};
 
 	render() {
 		return (
@@ -94,13 +102,18 @@ class App extends Component {
 				)}
 				*/}
 				<Route
+					path='/products/:id'
+					render={(props) => <Product products={this.state.products} {...props} />}
+				/>
+				<Route
 					exact
 					path='/'
 					render={(props) => (
 						<Home
 							products={this.state.products}
 							filteredSearch={this.state.filteredSearch}
-							searchInput={this.state.searchInput}
+							searchInput={this.state.searchInput.toLowerCase()}
+							handleClick={this.handleClick}
 						/>
 					)}
 				/>
