@@ -52,7 +52,7 @@ const styles = {
 		width: '31%',
 		height: '350px',
 		'min-width': '300px',
-		margin: '0 0 15px 1.75%'
+		margin: '0 20px 20px 1.75%'
 	},
 	media: {
 		height: 200,
@@ -97,21 +97,19 @@ class Home extends React.Component {
 			<div className='foundations-list'>
 				{/*{this.props.products.slice(0, 12).map((product) => ( */}
 				{filteredSearch.slice(0, 12).map((product) => {
-					{
-						console.log(product);
-					}
+					// {
+					// 	console.log(product);
+					// }
 					return (
 						<Link key={product.id} to={`/products/${product.id}`}>
 							<Card className={classes.card}>
 								<CardActionArea>
-									<a>
-										<CardMedia
-											className={classes.media}
-											// image={product.image_link}
-											image={product.api_featured_image}
-											title={product.name}
-										/>
-									</a>
+									<CardMedia
+										className={classes.media}
+										// image={product.image_link}
+										image={product.api_featured_image}
+										title={product.name}
+									/>
 									<CardContent>
 										<Typography gutterBottom variant='h5' component='h2'>
 											{product.brand}

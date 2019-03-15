@@ -21,11 +21,14 @@ const Product = (props) => {
 	if (product) {
 		newProduct = (
 			<div>
-				<h1>{product.name}</h1>
 				<div>
-					<p>{product.brand}</p>
-					<p>{product.product_link}</p>
-					<img src={product.image_link} alt='product-img' />
+					<h1>{product.name}</h1>
+					<div>
+						<p>{product.brand}</p>
+						<a href={product.product_link}>
+							<img src={product.image_link} alt='product-img' />
+						</a>
+					</div>
 				</div>
 			</div>
 		);
