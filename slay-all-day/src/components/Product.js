@@ -25,6 +25,7 @@ const Product = (props) => {
 					<h1>{product.name}</h1>
 					<div>
 						<p>{product.brand}</p>
+						<p>${product.price}0</p>
 						<a href={product.product_link}>
 							<img src={product.image_link} alt='product-img' />
 						</a>
