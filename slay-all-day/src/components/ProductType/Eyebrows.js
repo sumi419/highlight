@@ -76,7 +76,7 @@ class Eyebrows extends React.Component {
 								<Typography component='p'>{product.name}</Typography>
 							</CardContent>
 						</CardActionArea>
-						<CardActions>
+						<CardActions className='card-button'>
 							<a href={product.product_link}>
 								<Button size='small' color='primary'>
 									{product.brand}
