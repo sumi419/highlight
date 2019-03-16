@@ -6,12 +6,17 @@ const NavBar = (props) => {
 	return (
 		<div className='nav-container'>
 			<div className='header'>
-				<div>
-					<Link to='/'>
-						<h1> Slay All Day ✨</h1>
+				<div className='title-form'>
+					<Link to='/shopping'>
+						<img
+							src='https://mothersday.floralgaragesg.com/wp-content/uploads/2016/06/basket-icon.png'
+							alt='icon'
+						/>
 					</Link>
-				</div>
-				{/*}	<form action=''>
+					<Link to='/'>
+						<h1>Slay All Day</h1>
+					</Link>
+					{/*}	<form action=''>
 					<input
 						type='text'
 						placeholder='Search'
@@ -21,15 +26,18 @@ const NavBar = (props) => {
 					/>
 				</form>
 	*/}
-				<form action=''>
-					<input
-						type='text'
-						placeholder='Search'
-						onChange={props.handleSearchInput}
-						value={props.filterTarget}
-						name='filterTarget'
-					/>
-				</form>
+					<div className='form-wrapper'>
+						<form action=''>
+							<input
+								type='text'
+								placeholder='Search'
+								onChange={props.handleSearchInput}
+								value={props.filterTarget}
+								name='filterTarget'
+							/>
+						</form>
+					</div>
+				</div>
 
 				<div className='main-nav'>
 					<div className='product-type'>
