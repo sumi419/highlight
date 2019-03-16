@@ -15,8 +15,62 @@ a {
 	text-decoration: none;
 }
 
-CardActions {
+.card-button {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-wrapper {
+	display: flex;
+	width: 1000px;
+	margin: 0 auto;
 	justify-content: space-around;
+}
+
+.product-wrapper img {
+	height: 300px;
+	width: 400px;
+	object-fit: contain;
+}
+
+.product-info {
+	flex-direction: column;
+	width: 400px;
+}
+
+.product-info h1 {
+	margin: 0 auto;
+}
+
+.buttons {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.product-info button {
+	width: 200px;
+	height: 60px;
+	font-weight: 900;
+	color: white;
+	margin-bottom: 20px;
+	font-size: 1rem;
+	border: 3px solid rosybrown;
+	background: #dea6af;
+	border-radius: 4px;
+}
+
+.product-info button:hover {
+	border: 3px dotted rosybrown;
+	color: rosybrown;
+	background: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 700px) {
+	.product-wrapper {
+		flex-direction: column;
+	}
 }
 
 .loader {
