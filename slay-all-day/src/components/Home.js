@@ -52,7 +52,7 @@ const styles = {
 		width: '31%',
 		height: '350px',
 		'min-width': '300px',
-		margin: '0 20px 20px 1.75%'
+		margin: '0 0 15px 1.75%'
 	},
 	media: {
 		height: 200,
@@ -60,10 +60,6 @@ const styles = {
 		// 'background-size': 'cover',
 		// 'background-repeat': 'no-repeat',
 		// 'background-position': '50% 50%'
-	},
-	button: {
-		display: 'flex',
-		'justify-content': 'space-between'
 	}
 };
 
@@ -101,34 +97,34 @@ class Home extends React.Component {
 					// 	console.log(product);
 					// }
 					return (
-						<Link key={product.id} to={`/products/${product.id}`}>
-							<Card className={classes.card}>
-								<CardActionArea>
+						<Card className={classes.card}>
+							<CardActionArea>
+								<Link key={product.id} to={`/products/${product.id}`}>
 									<CardMedia
 										className={classes.media}
 										// image={product.image_link}
 										image={product.api_featured_image}
 										title={product.name}
 									/>
-									<CardContent>
-										<Typography gutterBottom variant='h5' component='h2'>
-											{product.brand}
-										</Typography>
-										<Typography component='p'>{product.name}</Typography>
-									</CardContent>
-								</CardActionArea>
-								<CardActions>
-									<a href={product.product_link}>
-										<Button size='small' color='primary'>
-											{product.brand}
-										</Button>
-									</a>
+								</Link>
+								<CardContent>
+									<Typography gutterBottom variant='h5' component='h2'>
+										{product.brand}
+									</Typography>
+									<Typography component='p'>{product.name}</Typography>
+								</CardContent>
+							</CardActionArea>
+							<CardActions className='card-button'>
+								<a href={product.product_link}>
 									<Button size='small' color='primary'>
-										${product.price}0
+										{product.brand}
 									</Button>
-								</CardActions>
-							</Card>
-						</Link>
+								</a>
+								<Button size='small' color='primary'>
+									${product.price}0
+								</Button>
+							</CardActions>
+						</Card>
 					);
 				})}
 			</div>
