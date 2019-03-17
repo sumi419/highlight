@@ -77,11 +77,11 @@ class Mascara extends React.Component {
 							</CardContent>
 						</CardActionArea>
 						<CardActions className='card-button'>
-							<a href={product.product_link}>
+							<Link key={product.id} to={`/products/${product.id}`}>
 								<Button size='small' color='primary'>
 									{product.brand}
 								</Button>
-							</a>
+							</Link>
 							<Button size='small' color='primary'>
 								${product.price}0
 							</Button>
