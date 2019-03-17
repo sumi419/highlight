@@ -61,13 +61,13 @@ class Lipstick extends React.Component {
 				{filteredSearch.slice(0, 15).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
-							<a href={product.product_link}>
+							<Link key={product.id} to={`/products/${product.id}`}>
 								<CardMedia
 									className={classes.media}
 									image={product.api_featured_image}
 									title={product.name}
 								/>
-							</a>
+							</Link>
 							<CardContent>
 								<Typography gutterBottom variant='h5' component='h2'>
 									{product.brand}
