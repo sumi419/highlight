@@ -16,7 +16,7 @@ import ProductsList from './components/ProductsList';
 import Product from './components/Product';
 import Search from './components/Search';
 import Loading from './components/Loading';
-import Carousel from './Carousel';
+import Footer from './components/ProductType/Footer';
 import data from './data';
 
 class App extends Component {
@@ -205,6 +205,7 @@ class App extends Component {
 						/>
 					)}
 				/>
+				<Footer />
 			</div>
 		);
 	}

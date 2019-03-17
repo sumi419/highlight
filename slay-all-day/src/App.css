@@ -21,25 +21,37 @@ a {
 }
 
 .product-wrapper {
-	display: flex;
+	/* display: flex;
 	width: 1000px;
+	margin: 0 auto;
+	justify-content: space-around; */
+	display: flex;
+	width: 100%;
+	max-width: 900px;
 	margin: 0 auto;
 	justify-content: space-around;
 }
 
 .product-wrapper img {
 	height: 300px;
-	width: 400px;
+	width: 300px;
 	object-fit: contain;
 }
 
 .product-info {
 	flex-direction: column;
-	width: 400px;
 }
 
 .product-info h1 {
 	margin: 0 auto;
+}
+@media (max-width: 420px) {
+	.product-wrapper {
+		flex-wrap: wrap;
+	}
+	.product-wrapper img {
+		width: 75%;
+	}
 }
 
 .buttons {
