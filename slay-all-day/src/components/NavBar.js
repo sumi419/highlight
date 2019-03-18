@@ -14,7 +14,7 @@ const NavBar = (props) => {
 						/>
 					</Link>
 					<div className='title-wrapper'>
-						<Link to='/'>
+						<Link to='/' className='title-link'>
 							<h1>Slay All Day</h1>
 						</Link>
 					</div>
