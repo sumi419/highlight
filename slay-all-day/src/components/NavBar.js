@@ -13,9 +13,11 @@ const NavBar = (props) => {
 							alt='icon'
 						/>
 					</Link>
-					<Link to='/'>
-						<h1>Slay All Day</h1>
-					</Link>
+					<div className='title-wrapper'>
+						<Link to='/'>
+							<h1>Slay All Day</h1>
+						</Link>
+					</div>
 					{/*}	<form action=''>
 					<input
 						type='text'

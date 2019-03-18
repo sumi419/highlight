@@ -10,10 +10,16 @@
 	font-weight: 900;
 }
 
+.title-wrapper {
+	text-align: center;
+	width: 400px;
+}
+
 .nav-container h1 {
 	margin: 0;
 	font-size: 1.45em;
 	color: whitesmoke;
+	text-align: center;
 }
 .nav-container img {
 	border-radius: 50%;
