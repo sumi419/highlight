@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-class Shopping extends Component {
+class Loves extends Component {
 	state = {
-		products: []
+		loves: []
 	};
-
 	render() {
 		return <div>Hello World</div>;
 	}
 }
 
-export default withRouter(Shopping);
+export default withRouter(Loves);
