@@ -61,7 +61,7 @@ a {
 	margin: 0 auto;
 }
 
-.product-info button {
+/* .product-info button {
 	width: 200px;
 	height: 60px;
 	font-weight: 900;
@@ -77,7 +77,7 @@ a {
 	border: 3px dotted rosybrown;
 	color: rosybrown;
 	background: rgba(0, 0, 0, 0);
-}
+} */
 
 @media (max-width: 700px) {
 	.product-wrapper {
