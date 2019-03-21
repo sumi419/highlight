@@ -17,7 +17,9 @@
 
 .title-link {
 	position: relative;
-	left: 50px;
+	/* left: 50px; */
+	/* don't need to offset title anymore when we added new icon 
+	and made search input width the same as both icons */
 }
 
 .nav-container h1 {
@@ -54,6 +56,13 @@
 	background-image: linear-gradient(rgba(249, 119, 76, 0.55), rgba(128, 42, 12, 0.75)),
 		url('./images/makeup2.jpg');
 }
+
+.shopping-love {
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+}
+
 .product-type {
 	display: grid;
 	/* grid-template-columns: auto auto auto auto; */
@@ -70,7 +79,8 @@
 	align-items: center;
 }
 input {
-	width: 100%;
+	/* width: 100%; */
+	width: 150px;
 	transition: transform 250ms ease-in-out;
 	font-size: 14px;
 	line-height: 18px;
@@ -123,6 +133,10 @@ input:focus {
 		margin: 0px;
 		font-size: 14px;
 	}
+
+	input {
+		width: 100%;
+	}
 }
 
 @media (max-width: 700px) {
@@ -141,9 +155,9 @@ input:focus {
 	.nav-container h1 {
 		margin-top: 0px;
 	}
-	input {
+	/* input {
 		width: 100px;
-	}
+	} */
 }
 
 @media (min-width: 701px) {

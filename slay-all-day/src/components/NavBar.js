@@ -7,7 +7,7 @@ const NavBar = (props) => {
 		<div className='nav-container'>
 			<div className='header'>
 				<div className='title-form'>
-					<div>
+					<div className='shopping-love'>
 						<Link to='/shopping'>
 							<img
 								src='https://mothersday.floralgaragesg.com/wp-content/uploads/2016/06/basket-icon.png'
