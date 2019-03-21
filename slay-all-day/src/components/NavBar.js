@@ -7,12 +7,20 @@ const NavBar = (props) => {
 		<div className='nav-container'>
 			<div className='header'>
 				<div className='title-form'>
-					<Link to='/shopping'>
-						<img
-							src='https://mothersday.floralgaragesg.com/wp-content/uploads/2016/06/basket-icon.png'
-							alt='icon'
-						/>
-					</Link>
+					<div>
+						<Link to='/shopping'>
+							<img
+								src='https://mothersday.floralgaragesg.com/wp-content/uploads/2016/06/basket-icon.png'
+								alt='icon'
+							/>
+						</Link>
+						<Link to='/loves'>
+							<img
+								src='https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/web-pict-35.png'
+								alt='icon'
+							/>
+						</Link>
+					</div>
 					<div className='title-wrapper'>
 						<Link to='/' className='title-link'>
 							<h1>Slay All Day</h1>
