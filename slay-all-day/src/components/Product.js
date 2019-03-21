@@ -41,8 +41,10 @@ const Product = (props) => {
 						</a>
 					</div>
 					<div className='product-info'>
-						<h1>{product.brand}</h1>
-						<p>{product.name}</p>
+						<a href={product.product_link}>
+							<h1>{product.brand}</h1>
+							<p>{product.name}</p>
+						</a>
 						<p>${product.price}0</p>
 						<div className='buttons'>
 							<div>
