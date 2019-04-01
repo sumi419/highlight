@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
+import Emoji from './Emoji';
 const styles = (theme) => ({
 	button: {
 		margin: theme.spacing.unit
@@ -58,7 +58,7 @@ class Product extends React.Component {
 							<div className='buttons'>
 								<div>
 									<Button variant='contained' color='secondary' className={classes.button}>
-										Add to basket 🛍
+										Add to basket <Emoji symbol='🛍' label='shopping-basket' />
 									</Button>
 								</div>
 								<div>
@@ -67,7 +67,7 @@ class Product extends React.Component {
 										color='secondary'
 										className={classes.button}
 										onClick={() => this.handleAddLove()}>
-										Add to Loves 💖
+										Add to Loves <Emoji symbol='💖' label='sparkling-heart' />
 									</Button>
 								</div>
 							</div>
