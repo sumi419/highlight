@@ -12,12 +12,11 @@ const styles = (theme) => ({
 	}
 });
 
-const Product = (props) => {
+class Product extends React.Component {
 	//	const { name, brand, product_link, image_link, price } = props.product;
-	console.log(props.match.params.id);
-	const product = props.products.find((product) => `${product.id}` === props.match.params.id);
-	console.log(product);
-	const { classes } = props;
+	state = {
+		loves: []
+	};
 	// const singleProduct = product;
 	// console.log(singleProduct[0].id);
 	// const { name, brand, product_link, image_link, price } = product;
@@ -30,44 +29,60 @@ const Product = (props) => {
 	// 	<img src={product.image_link} alt='product-img' />
 	// </div>
 	// </div> ) :('123')
-	let newProduct;
-	if (product) {
-		newProduct = (
-			<div>
-				<div className='product-wrapper'>
-					<div>
-						<a href={product.product_link}>
-							<img src={product.image_link} alt='product-img' />
-						</a>
-					</div>
-					<div className='product-info'>
-						<a href={product.product_link}>
-							<h1>{product.brand}</h1>
-							<p>{product.name}</p>
-						</a>
-						<p>${product.price}0</p>
-						<div className='buttons'>
-							<div>
-								<Button variant='contained' color='secondary' className={classes.button}>
-									Add to basket 🛍
-								</Button>
-							</div>
-							<div>
-								<Button variant='contained' color='secondary' className={classes.button}>
-									Add to Loves 💖
-								</Button>
+
+	handleAddLove = () => {
+		//
+	};
+
+	render() {
+		console.log(this.props.match.params.id);
+		const product = this.props.products.find((item) => `${item.id}` === this.props.match.params.id);
+		console.log(product);
+		const { classes } = this.props;
+		let newProduct;
+		if (product) {
+			newProduct = (
+				<div>
+					<div className='product-wrapper'>
+						<div>
+							<a href={product.product_link}>
+								<img src={product.image_link} alt='product-img' />
+							</a>
+						</div>
+						<div className='product-info'>
+							<a href={product.product_link}>
+								<h1>{product.brand}</h1>
+								<p>{product.name}</p>
+							</a>
+							<p>${product.price}0</p>
+							<div className='buttons'>
+								<div>
+									<Button variant='contained' color='secondary' className={classes.button}>
+										Add to basket 🛍
+									</Button>
+								</div>
+								<div>
+									<Button
+										variant='contained'
+										color='secondary'
+										className={classes.button}
+										onClick={() => this.handleAddLove()}>
+										Add to Loves 💖
+									</Button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		);
-	} else {
-		newProduct = <h1>Loading...</h1>;
+			);
+		} else {
+			newProduct = <h1>Loading...</h1>;
+		}
+		console.log(newProduct);
+
+		return <div>{newProduct}</div>;
 	}
-	console.log(newProduct);
-	return <div>{newProduct}</div>;
-};
+}
 
 Product.propTypes = {
 	classes: PropTypes.object.isRequired
