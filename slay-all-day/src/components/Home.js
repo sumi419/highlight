@@ -85,8 +85,8 @@ class Home extends React.Component {
 	render() {
 		let filteredSearch = this.props.products.filter(
 			(product) =>
-				product.name.toLowerCase().includes(this.props.searchInput) ||
-				product.brand.includes(this.props.searchInput)
+				product.name.toLowerCase().indexOf(this.props.searchInput.toLowerCase()) !== -1 ||
+				product.brand.toLowerCase().indexOf(this.props.searchInput.toLowerCase()) !== -1
 		);
 		const { classes } = this.props;
 		return (
