@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios';
 import NavBar from './components/NavBar';
 import Foundation from './components/ProductType/Foundation';
 import Blush from './components/ProductType/Blush';
@@ -12,9 +11,7 @@ import Eyeshadow from './components/ProductType/Eyeshadow';
 import Eyeliner from './components/ProductType/Eyeliner';
 import Mascara from './components/ProductType/Mascara';
 import Lipstick from './components/ProductType/Lipstick';
-import ProductsList from './components/ProductsList';
 import Product from './components/Product';
-import Search from './components/Search';
 import Loading from './components/Loading';
 import Footer from './components/ProductType/Footer';
 import data from './data';
@@ -46,30 +43,16 @@ class App extends Component {
 		});
 	}
 
-	// 	itemFilter = (e) => {
-	// 	this.state.products
-	// };
-
 	handleSearchInput = (e) => {
 		this.setState({
 			searchInput: e.target.value
 		});
 	};
 
-	// handleSearchInput = (e) => {
-	// 	e.preventDefault();
-	// 	this.setState(
-	// 		{
-	// 			searchInput: e.target.value
-	// 		},
-	// 		() => this.itemFilter()
-	// 	);
-	// };
 	handleClick = (e, product) => {
 		e.preventDefault();
 		console.log(product);
 		console.log(e.target);
-		// localStorage.setItem('product_id', product.id);
 	};
 
 	render() {
