@@ -28,31 +28,9 @@ const styles = {
 };
 
 class Blush extends React.Component {
-	// state = {
-	// 	blushs: []
-	// };
 	state = {
 		filteredSearch: []
 	};
-	// componentDidMount() {
-	// 	const api = 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush';
-	// 	axios
-	// 		.get(api)
-	// 		.then((res) => {
-	// 			console.log(res.data);
-	// 			this.setState({ blushs: res.data });
-	// 		})
-	// 		.catch((err) => console.error(err));
-	// }
-
-	// componentDidMount() {
-	// 	console.log(
-	// 		this.props.products.filter(
-	// 			(product) => !product.brand.toLowerCase().includes(this.props.searchInput)
-	// 		)
-	// 	);
-	// 	console.log(this.props.products.map((product) => product.name));
-	// }
 
 	render() {
 		// filter out for null values first
@@ -73,8 +51,6 @@ class Blush extends React.Component {
 		const { classes } = this.props;
 		return (
 			<div className='foundations-list'>
-				{/*} {this.state.blushs.slice(0, 12).map((product) => (*/}
-				{/*{filtered.slice(0, 15).map((product) => (*/}
 				{filteredSearch.slice(0, 12).map((product) => (
 					<Card className={classes.card}>
 						<CardActionArea>
