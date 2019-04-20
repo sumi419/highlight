@@ -20,7 +20,6 @@ export default class Carousel extends Component {
 
 	leftClick = () => {
 		let index = this.state.index;
-		// console.log(index);
 
 		const imagesLength = this.state.carouselData.length;
 		console.log(imagesLength);
