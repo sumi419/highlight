@@ -2,6 +2,7 @@
   "name": "slay-all-day",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sumi419.github.io/highlight",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "axios": "^0.19.0",
@@ -11,12 +12,12 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.1.8"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+ "scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "predeploy": "npm run build",
+  "deploy": "NODE_OPTIONS=--openssl-legacy-provider gh-pages -d build"
+},
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -25,5 +26,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
